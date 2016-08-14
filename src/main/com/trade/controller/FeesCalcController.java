@@ -6,7 +6,7 @@ import main.com.trade.model.DataRow;
 import main.com.trade.service.ServiceIntf;
 import main.com.trade.service.impl.FeeCalcService;
 
-public class FeesCalcController extends ControllerTemplate{
+public class FeesCalcController extends ControllerTemplate{//TemplateDP
 	
 	public FeesCalcController(String inputFileName, String outputFileName){
 		super(inputFileName,outputFileName);
@@ -14,7 +14,7 @@ public class FeesCalcController extends ControllerTemplate{
 
 	@Override
 	public void computeFees(List<DataRow> dataList) {
-		ServiceIntf<List<DataRow>,List<DataRow>> service = FeeCalcService.getService();
+		ServiceIntf<List<DataRow>,List<DataRow>> service = FeeCalcService.getService();// strategy DP
 		service.execute(dataList);
 	}
 
