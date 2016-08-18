@@ -34,7 +34,7 @@ public class FeeCalcService implements ServiceIntf<List<DataRow>, List<DataRow>>
 		return null;
 	}
 
-	// inlcude logic to include part orders
+	// include logic to include part orders
 	// eg buy 100, sell 50, and again sell 50
 	private void markIntraDay(List<DataRow> data) {
 		for (int i = 0; i < data.size() - 1; i++) {

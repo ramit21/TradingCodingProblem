@@ -12,7 +12,7 @@ public class FeesCalcControllerTest {
 
 	@Before
 	public void setup() {
-		controller = new FeesCalcController("src/resources/inputdata.txt", "src/resources/output.txt");
+		controller = new FeesCalcController("src/resources/inputdata.txt", "src/resources/output.txt", new String[]{"ClientName","Quantity"});
 	}
 
 	@Test

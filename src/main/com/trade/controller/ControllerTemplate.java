@@ -21,6 +21,7 @@ public abstract class ControllerTemplate {
 	public final boolean produceTransactionFeeFile() {
 		List<DataRow> dataList = readFile();
 		computeFees(dataList);
+		dataList = reOrder(dataList, 0);
 		return writeFile(dataList);
 	}
 
@@ -30,6 +31,11 @@ public abstract class ControllerTemplate {
 	}
 
 	public abstract void computeFees(List<DataRow> dataList);
+
+	public List<DataRow> reOrder(List<DataRow> dataList, int curIndex) {// hook
+																		// method
+		return dataList;
+	}
 
 	public Boolean writeFile(List<DataRow> dataList) {
 		ServiceIntf<FileWriterDM, Boolean> service = FileWriterService.getService();
